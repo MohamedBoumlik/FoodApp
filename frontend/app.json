@@ -6,7 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/icon.jpg",
     "splash": {
-      "image": "./assets/splash/mysplash.png",
+      "image": "./assets/splash/a.png",
       "resizeMode": "cover"
     },
     "updates": {

@@ -28,12 +28,12 @@ const createRecette = async (req: Request, res: Response) => {
             images:req.body.images
         } as IRecette
         
-        const categorieRecette= await Categorie.findOne({nom:req.body.categorie});
-        if( categorieRecette){
+        // const categorieRecette= await Categorie.findOne({nom:req.body.categorie});
+        // if( categorieRecette){
          
-         data.categorieId=categorieRecette.id;
+        //  data.categorieId=categorieRecette.id;
         
-        }    
+        // }    
         const recette:any = await Recette.create(data);
 
         await recette.save((err:any, recette:any)=>{
