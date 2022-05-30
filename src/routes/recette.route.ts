@@ -1,7 +1,7 @@
 import express from 'express';
 // const multer = require('multer');
 
-import { createRecette,getRecettes,updateRecette,deleteRecette,getOneRecette } from '../controllers/recette.controller';
+import { createRecette,getRecettes,updateRecette,deleteRecette,getOneRecette } from '@controllers/recette.controller';
 
 const router = express.Router();
 // Setting up multer as a middleware to grab photo uploads
