@@ -178,6 +178,7 @@ const New: NextPage<Props> = ({}) => {
         title: "Product was register successfully!",
         text: "",
         icon: "success",
+        // @ts-ignore
         button: "Ok",
       });
     }

@@ -2,10 +2,14 @@
   "name": "express-app",
   "version": "1.0.0",
   "license": "MIT",
+  "engines": {
+    "node": "14.17.1"
+  },
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only src/server.ts",
-    "build": "tsc && tsc-alias",
-    "start": "pm2-runtime start ecosystem.config.js --env production",
+    "build": "tsc -p tsconfig.json && tsc-alias",
+    "start:pm2": "pm2-runtime start ecosystem.config.js --env production",
+    "start": "node build/server.js",
     "start:dev": "pm2 start ecosystem.config.js",
     "kill": "pm2 kill",
     "test": "jest",
