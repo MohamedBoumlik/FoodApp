@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
     "sourceMap": true,
-    "target": "ESNext",
+    "target": "ES6",
     "module": "CommonJS",
     "outDir": "build",
     "strict": true,
-    "lib": ["esnext"],
+    "lib": ["es6", "dom" , "es2017" , "es2019" , "ESNext.AsyncIterable"],
     "esModuleInterop": true,
     "moduleResolution": "Node",
     "incremental": true,

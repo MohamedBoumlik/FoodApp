@@ -1,4 +1,13 @@
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -31,9 +40,9 @@ app.use('/api/categorie', index_1.categorie);
 app.use('/api/recette', index_1.recette);
 app.use('/api/menu', index_1.menu);
 // listen to port you specified
-app.listen(process.env.port, async () => {
-    const { connection } = await (0, connectDb_1.db)();
+app.listen(process.env.port, () => __awaiter(void 0, void 0, void 0, function* () {
+    const { connection } = yield (0, connectDb_1.db)();
     console.log(`🚀 Server ready at: http://localhost:${process.env.port}`);
     console.log(`👋 Connected to database successfully : ${connection.name}`);
-});
+}));
 //# sourceMappingURL=server.js.map
